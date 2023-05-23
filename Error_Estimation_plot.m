@@ -3,14 +3,14 @@
 % fix later
 
 clear; clc;close all;
-cd 'C:\Users\samxj\OneDrive - University of Miami\PhD submeso ML research\MATLAB\GPR_NCOM\GPR_VelF_output'
+cd 'Here is the folder where you store your data'
 
 
 % GPR data
 load('Convergence_200drifter_6h_DD_OI_FIL.mat')
 % NCOM data
-File_Dir=dir('D:\PhD Research Datasets\ML-GPR\Original dataset_NCOM_surface_velocity\');
-path=['D:\PhD Research Datasets\ML-GPR\Original dataset_NCOM_surface_velocity\'];
+File_Dir=dir('Location of the NCOM data');
+path=['Location of the NCOM data'];
 
 i=1;
 for k=3:length(File_Dir)
@@ -410,7 +410,6 @@ histogram(Kv1,'BinWidth',0.0005)
 
 
 %% magnitude error vs. exact/predeicted velocity
-addpath 'C:\Users\samxj\OneDrive - University of Miami\PhD submeso ML research\MATLAB\GPR_NCOM\'
 % U
 Diff_U=(NCOM_U-GPR_U)./NCOM_U*100;
 Diff_V=(NCOM_V-GPR_V)./NCOM_V*100;
